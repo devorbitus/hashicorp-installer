@@ -1,5 +1,5 @@
 FROM alpine:latest
-LABEL maintainer="seth@sethvargo.com"
+LABEL maintainer="chrisg@armory.io"
 
 # Install apt-utils to be helpful
 RUN apk --no-cache add curl gnupg unzip
