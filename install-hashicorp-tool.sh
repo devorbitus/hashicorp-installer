@@ -6,7 +6,7 @@ set -e
 # non-zero on failure.
 #
 # Usage:
-#   install_hashicorp_tool.sh terraform 0.11.10,0.11.11,0.11.12
+#   install_hashicorp_tool.sh terraform '0.11.10 0.11.11 0.11.12'
 #
 # Requirements:
 #   - gpg, with hashicorp key trusted
