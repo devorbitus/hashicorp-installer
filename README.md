@@ -34,7 +34,7 @@ $ install-hashicorp-tool terraform '0.11.7 0.11.10 0.11.11'
 The tool can be used as a standalone installer:
 
 ```text
-$ docker run -v $(pwd):/software devorbitus/hashicorp-installer terraform 0.11.7
+$ docker run -v $(pwd):/software devorbitus/hashicorp-multi-installer terraform 0.11.7
 ```
 
 ### Multi-Stage Builder
@@ -43,7 +43,7 @@ The tool can also be used as part of a multi-stage Docker build:
 
 ```dockerfile
 # Download and verify the integrity of the download first
-FROM devorbitus/hashicorp-installer AS installer
+FROM devorbitus/hashicorp-multi-installer AS installer
 RUN /install-hashicorp-tool "terraform" "0.11.7 0.11.10"
 
 # Now copy the binary over into a smaller base image
